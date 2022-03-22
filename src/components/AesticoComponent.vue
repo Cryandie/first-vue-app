@@ -91,9 +91,8 @@ export default defineComponent ({
             if(value<=20){
                 this.dangerBar = true
             }
-            else if (value>60){
+            else if (value>20){
                 this.dangerBar = false
-
             }
         }
     }
@@ -127,6 +126,10 @@ export default defineComponent ({
     border-radius: 10px;
 }
 
+.gio_bar_value{
+  background-color: #42B883;
+}
+
 .aestico_team{
     width: 90px;
     margin: 5px;
@@ -158,6 +161,8 @@ export default defineComponent ({
     border: 5px solid black;
     background-color: rgb(255, 176, 5);
 }
+
+
 
 button{
     margin: 10px;
