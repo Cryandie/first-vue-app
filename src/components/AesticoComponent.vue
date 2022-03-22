@@ -1,10 +1,14 @@
 <template>
 <div class="card">
+    <section class="screen">
     <h3>Giovanni & Rafael Patience Bar</h3>
     <div class="reput_bar">
-        <div class="gio_bar_value"  :style="{width:patienceBar + '%', backgroundColor:dangerBar? 'red' : '#42B883' }"><h3 class="bar_text">{{patienceBar}}%</h3></div>
+        <div class="gio_bar_value"  :style="{width:patienceBar + '%', backgroundColor:dangerBar? 'red' : '#42B883' }"><h3 class="bar_text">{{patienceBar}}%</h3>
+         <h2 v-if="patienceBar==0" class="gameover">Interview Over</h2>
+         <h2 v-else-if="patienceBar==100" class="welcome">Welcome To Aestico!🎈🎈🎈</h2>
+        </div>
     </div>
-    <section>
+    <section class="images_container">
         <img
     v-if="patienceBar>=90"
       class="emoji"
@@ -34,9 +38,16 @@
       src="https://i.pinimg.com/originals/48/b2/0d/48b20d142bb790bc142f9b4337781db6.jpg"
       alt="Happy emoji">
     </section>
+    </section>
       <br>
+      <hr>
+      <section class="buttons_container">
       <button class="good_btn" @click="upReputation()">Answer</button>
       <button class="bad_btn" @click="downReputation()">Panic</button>
+      </section>
+      <section class="buttons_image_container">
+          <img class="buttons_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLRO31jt_EqUj5GSM8EXkyGGcOa8Tx14c2bg&usqp=CAU" alt="gaming buttons logo">
+      </section>
       </div>
 </template>
 
@@ -102,12 +113,17 @@ export default defineComponent ({
     margin: auto;
     margin-top: 10%;
     border-radius: 20px;
+    background-color: rgb(59, 59, 59);
 }
 
 .reput_bar{
     background-color: rgba(245, 172, 164, 0.198);
+    height: 120px;
     width: 55%;
     margin: auto;
+    display:flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .aestico_team{
@@ -123,9 +139,25 @@ export default defineComponent ({
 }
 .bar_text{
     color: #fff;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
+.gameover{
+    width: 100%;
+    color: red;
+    display: flex;
+    justify-content: center;
+}
+.welcome{
+    color: rgb(195, 34, 235);
+}
+
+.screen{
+    border: 5px solid black;
+    background-color: rgb(146, 123, 72);
+}
+
 button{
     margin: 10px;
     border: 1px solid #fff;
@@ -135,12 +167,26 @@ button{
     padding-left: 20px;
     border-radius: 20px;
     font-weight: 800;
+    cursor: pointer
+}
+.buttons_container{
+    padding-top: 20px;
 }
 .good_btn{
     background-color: rgb(85, 211, 85);
 }
 .bad_btn{
     background-color: rgb(255, 105, 67)
+}
+
+.buttons_image_container{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.buttons_image{
+    width: 90px;
+    border-radius: 50%;
 }
 
 </style>

@@ -31,7 +31,7 @@ export default defineComponent({
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #3b90e6;
+  color: #66a5e4;
   margin-top: 60px;
 }
 html{
