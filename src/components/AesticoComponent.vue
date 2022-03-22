@@ -117,13 +117,14 @@ export default defineComponent ({
 }
 
 .reput_bar{
-    background-color: rgba(223, 207, 152, 0.808);
+    background-color: rgba(241, 203, 97, 0.692);
     height: 120px;
     width: 55%;
     margin: auto;
     display:flex;
     justify-content: center;
     align-content: center;
+    border-radius: 10px;
 }
 
 .aestico_team{
@@ -155,7 +156,7 @@ export default defineComponent ({
 
 .screen{
     border: 5px solid black;
-    background-color: rgb(146, 123, 72);
+    background-color: rgb(255, 176, 5);
 }
 
 button{

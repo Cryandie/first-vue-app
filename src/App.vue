@@ -31,11 +31,11 @@ export default defineComponent({
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #66a5e4;
+  color: #f5cf53;
   margin-top: 60px;
 }
 html{
-    background-color: rgb(226, 226, 226);
+    background-color: #fff
 }
 
 </style>
