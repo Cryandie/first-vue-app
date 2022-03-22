@@ -1,7 +1,7 @@
 <template>
 <div class="card">
     <section class="screen">
-    <h3>Giovanni & Rafael Patience Bar</h3>
+    <h3 class="color-animation">Giovanni & Rafael Patience Bar</h3>
     <div class="reput_bar">
         <div class="gio_bar_value"  :style="{width:patienceBar + '%', backgroundColor:dangerBar? 'red' : '#42B883' }"><h3 class="bar_text">{{patienceBar}}%</h3>
          <h2 v-if="patienceBar==0" class="gameover">Interview Over</h2>
@@ -117,7 +117,7 @@ export default defineComponent ({
 }
 
 .reput_bar{
-    background-color: rgba(245, 172, 164, 0.198);
+    background-color: rgba(223, 207, 152, 0.808);
     height: 120px;
     width: 55%;
     margin: auto;
@@ -187,6 +187,44 @@ button{
 .buttons_image{
     width: 90px;
     border-radius: 50%;
+}
+
+
+
+
+/* Color Animation */
+.color-animation {
+  -webkit-animation: color-change-4x 6s linear infinite alternate both;
+  animation: color-change-4x 6s linear infinite alternate both;
+}
+
+@-webkit-keyframes color-change-4x {
+  0% {
+    color: #19dcea;
+  }
+  33.3333% {
+    color: #b22cff;
+  }
+  66.666% {
+    color: #ea2222;
+  }
+  100% {
+    color: #f5be10;
+  }
+}
+@keyframes color-change-4x {
+  0% {
+    color: #19dcea;
+  }
+  33.3333% {
+    color: #b22cff;
+  }
+  66.666% {
+    color: #ea2222;
+  }
+  100% {
+    color: #f5be10;
+  }
 }
 
 </style>

@@ -37,4 +37,5 @@ export default defineComponent({
 html{
     background-color: rgb(226, 226, 226);
 }
+
 </style>
