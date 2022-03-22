@@ -1,16 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+
+  <h1>Starting Interview...</h1>
+  <GiovanniComponent/>
+
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import GiovanniComponent from "./components/AesticoComponent.vue"
+
 
 export default defineComponent({
+  data(){
+          return{
+
+            }
+        },
+
   name: 'App',
   components: {
-    HelloWorld
+    GiovanniComponent
+  
   }
 });
 </script>
@@ -21,7 +31,10 @@ export default defineComponent({
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #3b90e6;
   margin-top: 60px;
+}
+html{
+    background-color: rgb(226, 226, 226);
 }
 </style>
